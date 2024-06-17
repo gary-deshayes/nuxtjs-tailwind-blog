@@ -28,4 +28,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    public: {
+        wordpressUrl: 'https://gary-deshayes.com/graphql'
+    }
+  },
 })
