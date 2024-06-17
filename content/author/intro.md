@@ -1,7 +1,14 @@
 ---
-title: 👋 Hola , Good Day !
+title: 👋 Bonjour !
 page: intro
 draft: false
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+En tant que développeur je rencontre souvent des problèmes, plutôt que de me réjouir et de passer à autre chose je vous mets à disposition les solutions à travers des tutoriels de développement web qui je l’espère vous évitera de perdre autant de temps que moi.
+
+Développeur web fullstack dans l'Oise 60
+Je m’appelle Gary DESHAYES et je suis développeur web dans l’Oise depuis maintenant plus de 6 ans.
+
+Je suis développeur web Fullstack et je réalise mes sites web via Vue.js et Symfony/Node.js principalement mais j’apprends souvent de nouvelles technologies pour ne pas perdre la main sur toutes ces évolutions.
+
+Je suis également disponible pour vos projets en tant que Développeur web Fullstack freelance sur Malt, contactez moi via le bouton ci-dessous ! 

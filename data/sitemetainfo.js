@@ -1,11 +1,11 @@
 const siteMetaInfo = {
   // Used on Header
-  title: "Mondongo",
+  title: "Gary Deshayes - Développeur Fullstack Vue.js Symfony",
   description: "A tech enthusiast & self taught learner. Love to talk the way of tech.",
   // Used on Footer
   slogan: "Let's start coding",
   // System Settings
-  language: "en-us",
+  language: "fr",
   theme: "system", // system, dark or light
   siteUrl: "https://rathik.dev",
   siteRepo: "#",

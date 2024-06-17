@@ -12,12 +12,12 @@ import Home from "assets/icons/home.svg?component";
 import Academy from "assets/icons/academy.svg?component";
 
 const author = {
-    author_image: "/author.png",
-    name: "Md Solaiman",
-    position: "Full Stack Developer",
-    email: "hello@rathik.dev",
-    location: "Dhaka, Bangladesh",
-    github: "mdrathik",
+    author_image: "/Gary Deshayes Développeur web FullStack dans l'Oise.webp",
+    name: "Gary DESHAYES",
+    position: "Développeur full stack Vue.js/Symfony",
+    email: "deshayesgary@hotmail.fr",
+    location: "Oise, France",
+    github: "garydeshayes",
     socials: {
         twitter: "MDRT83716131",
         stackoverflow: "#",
