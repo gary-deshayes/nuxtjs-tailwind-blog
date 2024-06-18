@@ -1,7 +1,26 @@
+// Tools Expertise
+import StrapiIcon from "assets/devicon/strapi.svg?component";
+import AsanaIcon from "assets/devicon/asana.svg?component";
+import PhpstormIcon from "assets/devicon/phpstorm.svg?component";
+import AlgoliaIcon from "assets/devicon/algolia.svg?component";
+import WordpressIcon from "assets/devicon/wordpress.svg?component";
+import GitIcon from "assets/devicon/git.svg?component";
+import GithubIcon from "assets/devicon/github.svg?component";
+import FigmaIcon from "assets/devicon/figma.svg?component";
+// Infrastructure Expertise
+import DockerIcon from "assets/devicon/docker.svg?component";
+import KubernetesIcon from "assets/devicon/kubernetes.svg?component";
 // Backend Expertise
 import NodeIcon from "assets/devicon/node.svg?component";
+import SymfonyIcon from "assets/devicon/symfony.svg?component";
 import LaravelIcon from "assets/devicon/laravel.svg?component";
+import PhpIcon from "assets/devicon/php.svg?component";
+import MongodbIcon from "assets/devicon/mongodb.svg?component";
 // Frontend Expertise
+import HtmlIcon from "assets/devicon/html.svg?component";
+import CypressIcon from "assets/devicon/cypress.svg?component";
+import CssIcon from "assets/devicon/css.svg?component";
+import SassIcon from "assets/devicon/sass.svg?component";
 import VueIcon from "assets/devicon/vuejs.svg?component";
 import NuxtIcon from "assets/devicon/nuxt.svg?component";
 import BootstrapIcon from "assets/devicon/bootstrap.svg?component";
@@ -28,42 +47,131 @@ const author = {
     expertises: {
         "Frontend": [
             {
+                name: "HTML",
+                icon: HtmlIcon,
+                description: "HTML",
+            },
+            {
+                name: "CSS",
+                icon: CssIcon,
+                description: "CSS",
+            },
+            {
+                name: "SASS",
+                icon: SassIcon,
+                description: "SASS",
+            },
+            {
+                name: "Cypress",
+                icon: CypressIcon,
+                description: "Cypress",
+            },
+            {
                 name: "Bootstrap",
                 icon: BootstrapIcon,
-                description: "",
+                description: "Bootstrap",
             },
             {
                 name: "Tailwind",
                 icon: TailwindCssIcon,
-                description: "",
+                description: "Tailwind",
             },
             {
                 name: "Javascript",
                 icon: JavascriptIcon,
-                description: "",
+                description: "Javascript",
             },
             {
                 name: "VueJS",
                 icon: VueIcon,
-                description: "",
+                description: "Vue.js",
             },
             {
                 name: "Nuxt 3",
                 icon: NuxtIcon,
-                description: "",
+                description: "Nuxt 3",
             }
         ],
         "Backend": [
             {
                 name: "Laravel",
                 icon: LaravelIcon,
-                description: "",
+                description: "Laravel",
+            },
+            {
+                name: "Symfony",
+                icon: SymfonyIcon,
+                description: "Symfony",
             },
             {
                 name: "NodeJs",
                 icon: NodeIcon,
-                description: "",
+                description: "Node.js",
+            },
+            {
+                name: "MongoDB",
+                icon: MongodbIcon,
+                description: "MongoDB",
+            },
+            {
+                name: "PHP",
+                icon: PhpIcon,
+                description: "PHP",
             }
+        ],
+        "Infrastructure": [
+            {
+                name: "Docker",
+                icon: DockerIcon,
+                description: "Docker",
+            },
+            {
+                name: "Kubernetes",
+                icon: KubernetesIcon,
+                description: "Kubernetes",
+            },
+        ],
+        "Tools": [
+            {
+                name: "Strapi",
+                icon: StrapiIcon,
+                description: "Strapi",
+            },
+            {
+                name: "Asana",
+                icon: AsanaIcon,
+                description: "Asana",
+            },
+            {
+                name: "Phpstorm",
+                icon: PhpstormIcon,
+                description: "Phpstorm",
+            },
+            {
+                name: "Algolia",
+                icon: AlgoliaIcon,
+                description: "Algolia",
+            },
+            {
+                name: "Wordpress",
+                icon: WordpressIcon,
+                description: "Wordpress",
+            },
+            {
+                name: "GIT",
+                icon: GitIcon,
+                description: "GIT",
+            },
+            {
+                name: "Github",
+                icon: GithubIcon,
+                description: "Github",
+            },
+            {
+                name: "Figma",
+                icon: FigmaIcon,
+                description: "Figma",
+            },
         ]
     },
     timeline: [
@@ -88,9 +196,9 @@ const author = {
         },
         {
             icon: Home,
-            title: "Born in 1996, July 27",
-            subtitle: "Dhaka Bangladesh",
-            description: "I couldn't remember any productive work in that time. But",
+            title: "Né le 30 août 1994",
+            subtitle: "Senlis, France",
+            description: "Je ne me souviens d'aucun travail productif pendant cette période. ",
         }
     ],
 };

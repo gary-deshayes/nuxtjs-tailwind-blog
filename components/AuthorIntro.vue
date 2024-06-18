@@ -6,15 +6,17 @@
       {{ intro.title }}
     </h2>
     <div>
-      <p class="py-2">En tant que développeur je rencontre souvent des problèmes, plutôt que de me réjouir et de passer à autre chose je vous mets à disposition les solutions à travers des tutoriels de développement web qui je l’espère vous évitera de perdre autant de temps que moi.
+      <p class="py-2">
+        En tant que développeur je rencontre souvent des problèmes, plutôt que de me réjouir et de passer à autre chose je vous mets à disposition les solutions à travers des <b>tutoriels de développement web</b> qui je l’espère vous évitera de perdre autant de temps que moi.
       </p>
-      <p class="py-2">Développeur web fullstack dans l'Oise 60
+      <p class="py-2">
+        Je m’appelle <b>Gary DESHAYES</b> et je suis <b>développeur web dans l’Oise</b> depuis maintenant plus de 6 ans.
       </p>
-      <p class="py-2">Je m’appelle Gary DESHAYES et je suis développeur web dans l’Oise depuis maintenant plus de 6 ans.
+      <p class="py-2">
+        Je suis <b>développeur web Full Stack</b> et je réalise mes sites web via <b>Vue.js</b> et <b>Symfony/Node.js</b> principalement mais j’apprends souvent de nouvelles technologies pour ne pas perdre la main sur toutes ces évolutions.
       </p>
-      <p class="py-2">Je suis développeur web Fullstack et je réalise mes sites web via Vue.js et Symfony/Node.js principalement mais j’apprends souvent de nouvelles technologies pour ne pas perdre la main sur toutes ces évolutions.
-      </p>
-      <p class="py-2">Je suis également disponible pour vos projets en tant que Développeur web Fullstack freelance sur Malt, contactez moi via le bouton ci-dessous ! </p>
+      <p class="py-2">
+        Je suis également disponible pour vos projets en tant que <a href="https://www.malt.fr/profile/garydeshayes"><b>Développeur web Fullstack freelance sur Malt</b></a>, contactez moi via le bouton ci-dessous ! </p>
     </div>
   </div>
 </template>

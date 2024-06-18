@@ -5,8 +5,8 @@
         {{ key }}
       </h2>
       <ul class="flex flex-wrap gap-4 items-center">
-        <li v-for="expertise in expertises[key]" class="flex items-center">
-          <component :is="expertise.icon" class="h-10 w-10"></component>
+        <li v-for="expertise in expertises[key]" class="flex items-center" :title="expertise.description">
+          <component :is="expertise.icon" class="h-14 w-14"></component>
         </li>
       </ul>
     </div>
