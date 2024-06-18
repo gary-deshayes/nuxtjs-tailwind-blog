@@ -12,13 +12,10 @@
     </header>
     <div class="space-y-16 mx-auto max-w-7xl">
       <blog-item
-          v-for="article in articles"
-          :key="article.title"
-          :title="article.title"
-          :image="article.image"
-          :description="article.description"
-          :date="article.date"
-          :tags="article.tags.split(',')"
+          v-for="article in posts"
+          :key="article.id"
+          :title="article.title.rendered"
+          :description="''"
           :slug="article.slug"
       ></blog-item>
     </div>
@@ -27,6 +24,9 @@
 
 <script setup>
   import siteMetaInfo from "~/data/sitemetainfo.js";
+
+  const { data: posts }  = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/posts?_fields=id,title,link,slug&_embed');
+  console.log(posts);
 
   const {data: articles} = await useAsyncData('home', () =>  queryContent("/articles")
       .only([
