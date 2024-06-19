@@ -18,9 +18,27 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
         <ul
           class="flex flex-col font-medium mt-4 sm:rounded-lg bg-blue-500 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+              <button id="dropdownNavbarLink-page" data-dropdown-toggle="dropdownNavbar-page" class="flex items-center justify-between block px-4 py-3 no-underline text-white hover:text-black font-bold text-lg md:text-sm cursor-pointer">Dossiers
+                <svg class="w-4 h-4 ms-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar-page" class="z-10 hidden font-normal bg-blue-700 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li v-for="page in pages" :key="page.id">
+                      <NuxtLink
+                  class="block md:inline-block pl-3 my-2 no-underline text-white hover:text-grey-darker font-bold text-lg md:text-sm cursor-pointer hover:text-black" v-html="page.title.rendered">
+                  </NuxtLink>
+                    </li>
+                  </ul>
+              </div>
+            </li>
           <template v-for="parent in parentCategories" :key="parent.item.id">
             <li v-if="parent.children.length === 0">
               <NuxtLink
+                :to="'/blog/categorie/' + parent.item.slug"
                 class="block md:inline-block px-4 md:px-0 py-3 no-underline text-white hover:text-black font-bold text-lg md:text-sm cursor-pointer">
                 {{ parent.item.name }}</NuxtLink>
             </li>
@@ -30,16 +48,17 @@
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
               </button>
-            <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-blue-700 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li v-for="category in parent.children" :key="category.id">
-                    <NuxtLink
-                class="block md:inline-block pl-3 my-2 no-underline text-white hover:text-grey-darker font-bold text-lg md:text-sm cursor-pointer hover:text-black">
-                {{ category.name }}</NuxtLink>
-                  </li>
-                </ul>
-            </div>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-blue-700 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li v-for="category in parent.children" :key="category.id">
+                      <NuxtLink
+                      :to="'/blog/categorie/' + category.slug"
+                  class="block md:inline-block pl-3 my-2 no-underline text-white hover:text-grey-darker font-bold text-lg md:text-sm cursor-pointer hover:text-black">
+                  {{ category.name }}</NuxtLink>
+                    </li>
+                  </ul>
+              </div>
             </li>
           </template>
         </ul>
@@ -81,11 +100,14 @@ function groupCategoriesByParent(categories) {
 }
 const { data: categories }  = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/categories', {
   query: {
-    per_page: 100
+    per_page: 100,
+    exclude: [1]
   }
 });
 const parentCategories = groupCategoriesByParent(categories.value)
-console.log(parentCategories);
+
+const { data: pages }  = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/pages');
+console.log(pages);
 onMounted(() => {
   initFlowbite();
 })

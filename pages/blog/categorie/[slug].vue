@@ -2,7 +2,7 @@
   <div>
     <header class="pt-16 pb-9 sm:pb-16 sm:text-center">
       <h1 class="mb-4 text-8xl sm:text-4xl tracking-tight text-slate-800 font-extrabold dark:text-slate-200">
-        Blog
+        {{ categorie.name }}
       </h1>
       <p class="text-lg text-slate-700 dark:text-slate-400">
         All the latest Tailwind CSS news, straight from the&nbsp;team.
@@ -18,31 +18,22 @@
 <script setup>
 import siteMetaInfo from "~/data/sitemetainfo.js";
 
-const { data: posts } = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/posts?_embed', {
+const route = useRoute();
+const { data: categories }  = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/categories', {
   query: {
-    page: 10
+    slug: route.params.slug
   }
 });
-console.log(posts);
+let categorie = categories.value[0];
 
-const { data: articles } = await useAsyncData('home', () => queryContent("/articles")
-  .only([
-    "title",
-    "description",
-    "image",
-    "img",
-    "slug",
-    "tags",
-    "author",
-    "date",
-    "draft",
-  ])
-  .sort({ date: 1 })
-  .find()
-);
+const { data: posts } = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/posts', {
+  query: {
+    categories: [categorie.id]
+  }
+});
 
 useSeoMeta({
-  title: `${siteMetaInfo.title} | Blogs`,
+  title: `${siteMetaInfo.title} | ${categorie.name}`,
   meta: [
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -54,6 +45,7 @@ useSeoMeta({
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
+
 </script>
 
 
