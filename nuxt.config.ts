@@ -21,6 +21,9 @@ export default defineNuxtConfig({
     }
   },
   css: ["@/assets/css/main.css"],
+  tailwindcss: {
+    jit: false // Désactiver JIT si vous ne souhaitez pas de styles inline
+  },
   components: true,
   content: {
     markdown: {
