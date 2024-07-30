@@ -21,10 +21,6 @@ export default defineNuxtConfig({
     }
   },
   css: ["@/assets/css/main.css"],
-  buildModules: [
-    // Utiliser Tailwind CSS
-    '@nuxtjs/tailwindcss'
-  ],
   tailwindcss: {
     jit: false // Désactiver JIT si vous ne souhaitez pas de styles inline
   },
