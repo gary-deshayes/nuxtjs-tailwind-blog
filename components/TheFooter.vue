@@ -26,22 +26,7 @@
           ><span class="sr-only">mail</span>
           <MailIcon class="w-8 h-8 text-black" />
       </a
-        ><a
-          class="text-sm text-gray-500 transition hover:text-gray-600"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="author.socials.facebook"
-          ><span class="sr-only">facebook</span>
-          <FacebookIcon class="w-8 h-8 text-black" />
-        </a>
-        <a
-          class="text-sm text-gray-500 transition hover:text-gray-600"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="author.socials.youtube"
-          ><span class="sr-only">youtube</span>
-          <YoutubeIcon class="w-8 h-8 text-black" />
-      </a>
+        >
       </div>
       <div class="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
         <div>Copyright © {{ new Date().getFullYear() }}</div>
@@ -50,14 +35,14 @@
           >{{ author.name }}'s blog - {{ siteMetaInfo.slogan }}</a
         >
       </div>
-      <div class="mb-8 text-sm text-gray-500 dark:text-gray-400">
+      <div class="mb-8 text-sm text-gray-500 dark:text-gray-400 bg-green-500 rounded">
         <a
+        class="text-white m-4"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/mdrathik/tailwind-nuxtjs-starter-blog"
-        ></a>
+          href="https://github.com/mdrathik/nuxtjs-tailwind-blog"
+        >Site inspiré de ce template</a>
       </div>
-      <BuyMeACoffee></BuyMeACoffee>
     </div>
   </footer>
 </template>

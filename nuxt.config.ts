@@ -1,7 +1,25 @@
+import { towns } from "./data/town"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "nuxt-svgo", "@nuxt/image", "@nuxtjs/tailwindcss"],
+  target: 'static',
+  modules: ["@nuxt/content", "nuxt-svgo", "@nuxt/image", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+  site: {
+    url: 'gary-deshayes.com'
+  },
+  sitemap: {
+    hostname: 'https://gary-deshayes.com',
+    routes: () => {
+      return towns.map(town => {
+        const formattedTown = town.toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[éèêë]/g, 'e')
+          .replace(/[ç]/g, 'c');
+        return `/developpeur-web-fullstack/${formattedTown}`;
+      });
+    }
+  },
   css: ["@/assets/css/main.css"],
   components: true,
   content: {
@@ -32,5 +50,5 @@ export default defineNuxtConfig({
     public: {
         wordpressUrl: 'https://gary-deshayes.com/graphql'
     }
-  },
+  }
 })

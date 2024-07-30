@@ -29,6 +29,7 @@ import TailwindCssIcon from "assets/devicon/tailwindcss.svg?component";
 // Timeline
 import Home from "assets/icons/home.svg?component";
 import Academy from "assets/icons/academy.svg?component";
+import Briefcase from "assets/icons/briefcase.svg?component";
 
 const author = {
     author_image: "/Gary Deshayes Développeur web FullStack dans l'Oise.webp",
@@ -36,13 +37,14 @@ const author = {
     position: "Développeur full stack Vue.js/Symfony",
     email: "deshayesgary@hotmail.fr",
     location: "Oise, France",
-    github: "garydeshayes",
+    github: "https://github.com/gary-deshayes",
     socials: {
         twitter: "MDRT83716131",
         stackoverflow: "#",
         youtube: "#",
-        linkedin: "#",
+        linkedin: "https://fr.linkedin.com/in/gary-deshayes-368279145",
         facebook: "#",
+        github: "https://github.com/gary-deshayes",
     },
     expertises: {
         "Frontend": [
@@ -176,23 +178,69 @@ const author = {
     },
     timeline: [
         {
-            icon: Academy,
+            icon: Briefcase,
             currently: true,
-            title: "Software Engineer at FANG",
-            subtitle: "2018-Currently",
-            description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+            title: "Développeur web fullstack chez Ubiq",
+            subtitle: "Février 2023 - Maintenant",
+            description: "Développement de la plateforme ubiq.fr, plateforme de mise en relation pour trouver vos bureaux.",
+        },
+        {
+            icon: Briefcase,
+            title: "Développeur web fullstack freelance",
+            subtitle: "Juin 2022 - Avril 2023",
+            description: "Je me suis lancé dans l'aventure du freelancing avec quelques clients à mon actif pendant ces 11 mois.",
+        },
+        {
+            icon: Briefcase,
+            title: "Développeur web fullstack chez GTP-Conseil",
+            subtitle: "Septembre 2020 - Juin 2022",
+            description: "Travaux en équipe sur un projet de migration php 5 vers environnements Symfony 5 PHP 7, migration des anciennes bases de donnés vers doctrine de façon propre via des commandes Symfony",
+        },
+        {
+            icon: Briefcase,
+            title: "Développeur web fullstack chez Maxinfoweb",
+            subtitle: "Septembre 2019 - Septembre 2020",
+            description: "Réalisations de plusieurs sites vitrine et intranet de A à Z avec Symfony 4 et Bootstrap.",
         },
         {
             icon: Academy,
-            title: "Freelancer",
-            subtitle: "Released on December 7th, 2021",
-            description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+            title: "Alternant développeur web chez Maxinfoweb",
+            subtitle: "Novembre 2018 - Août 2019",
+            description: "Développement sous Symfony 4 de sites vitrines et intranet.",
         },
         {
             icon: Academy,
-            title: "2013 - Dhaka University ",
-            subtitle: "2013 - 2018",
-            description: "Studied \"BSC in Computer Science and Engineering\" in Dhaka University.",
+            title: "Licence web et mobile",
+            subtitle: "2018 - 2019",
+            description: "Diplôme de licence en alternance, apprentissage de Symfony, Angular, et autres bonnes pratiques/technologies",
+        },
+        {
+            icon: Academy,
+            title: "Développeur logiciels en stage chez Noteo SAS",
+            subtitle: "Janvier 2018 - Mars 2018",
+            description: "Développement d'une application Android connecté à Microsoft Dynamics.",
+        },
+        {
+            icon: Academy,
+            title: "Stage développeur web chez Maxinfoweb",
+            subtitle: "Juin 2017",
+            description: "Maintenance de site PHP pure existant.",
+        },
+        {
+            icon: Academy,
+            title: "BTS SIO",
+            subtitle: "2016 - 2018",
+            description: "Premier pas dans le développement web, apprentissage du HTML, CSS, PHP, C#.",
+        },
+        {
+            icon: Briefcase,
+            title: "Travaux de vacances en usine de cartonnerie",
+            subtitle: "2013 - 2016",
+        },
+        {
+            icon: Academy,
+            title: "BAC PRO SEN (Systèmes éléctroniques et numériques)",
+            subtitle: "2013 - 2016",
         },
         {
             icon: Home,
