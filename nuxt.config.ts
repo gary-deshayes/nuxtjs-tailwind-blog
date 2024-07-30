@@ -51,7 +51,4 @@ export default defineNuxtConfig({
         wordpressUrl: 'https://gary-deshayes.com/graphql'
     }
   },
-  webpack: {
-    extractCSS: true
-  }
 })
