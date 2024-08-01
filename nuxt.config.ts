@@ -7,12 +7,10 @@ export default defineNuxtConfig({
     nonce: true, // Enables HTML nonce support in SSR mode
     headers: {
       contentSecurityPolicy: {
-        'script-src': [
-          "'strict-dynamic'", // Modify with your custom CSP sources
-          "'nonce-gdhs'" // Enables CSP nonce support for scripts in SSR mode, supported by almost any browser (level 2)
-        ],
         'style-src': [
           "'self'", // Enables loading of stylesheets hosted on same origin
+          "https:", // For increased security, replace by the specific hosting domain or file name of your external stylesheets
+          "'unsafe-inline'" // Recommended default for most Nuxt apps
         ],
       }
     },
