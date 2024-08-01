@@ -2,7 +2,9 @@ import { towns } from "./data/town"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  buildDir: '.output',
+  nitro: {
+    output: { dir: '.output', serverDir: '.output/server', publicDir: '.output/public' }
+  },
   devtools: { enabled: true },
   target: 'static',
   modules: ["@nuxt/content", "nuxt-svgo", "@nuxt/image", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
