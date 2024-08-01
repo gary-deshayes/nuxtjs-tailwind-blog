@@ -2,6 +2,7 @@ import { towns } from "./data/town"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  buildDir: 'dist',
   devtools: { enabled: true },
   target: 'static',
   modules: ["@nuxt/content", "nuxt-svgo", "@nuxt/image", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
