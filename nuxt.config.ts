@@ -20,7 +20,14 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   target: 'static',
-  modules: ["@nuxt/content", "nuxt-svgo", "@nuxt/image", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+  modules: [
+    "@nuxt/content",
+    "nuxt-svgo",
+    "@nuxt/image",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/sitemap",
+    "nuxt-security"
+  ],
   site: {
     url: 'gary-deshayes.com'
   },
