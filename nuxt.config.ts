@@ -4,14 +4,8 @@ import { towns } from "./data/town"
 export default defineNuxtConfig({
   ssr: true,
   security: {
-    nonce: true, // Enables HTML nonce support in SSR mode
     headers: {
-      contentSecurityPolicy: {
-        'script-src': [
-          "'strict-dynamic'", // Modify with your custom CSP sources
-          "'nonce-{{nonce}}'" // Enables CSP nonce support for scripts in SSR mode, supported by almost any browser (level 2)
-        ]
-      }
+      contentSecurityPolicy: false
     },
   },
   webpack: {
