@@ -5,6 +5,18 @@ export default defineNuxtConfig({
   ssr: true,
   webpack: {
     extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    }
   },
   devtools: { enabled: true },
   target: 'static',
