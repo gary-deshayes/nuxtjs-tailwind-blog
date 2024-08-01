@@ -8,11 +8,12 @@ export default defineNuxtConfig({
     headers: {
       contentSecurityPolicy: {
         'style-src': [
-          "'self'", // Enables loading of stylesheets hosted on same origin
-          "https:", // For increased security, replace by the specific hosting domain or file name of your external stylesheets
-          "'unsafe-inline'", // Recommended default for most Nuxt apps,
-          "'nonce-1fz1fe1zdf1zd1fzfd'"
+          "'unsafe-inline'",
+          "'nonce-{{nonce}}'"
         ],
+        'script-src': [
+          "'nonce-1fz1fe1zdf1zd1fzfd'" // Enables CSP nonce support for scripts in SSR mode, supported by almost any browser (level 2)
+        ]
       }
     },
   },
@@ -32,7 +33,6 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
-  target: 'static',
   modules: [
     "@nuxt/content",
     "nuxt-svgo",
