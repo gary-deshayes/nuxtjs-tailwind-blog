@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "server": "node .output/server/index.mjs"
+    "server": "node .output/server/index.mjs",
+    "serveur": "node server.js"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^5.2.2",
