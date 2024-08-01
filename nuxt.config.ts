@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         'style-src': [
           "'self'", // Enables loading of stylesheets hosted on same origin
           "https:", // For increased security, replace by the specific hosting domain or file name of your external stylesheets
-          "'unsafe-inline'" // Recommended default for most Nuxt apps
+          "'unsafe-inline'", // Recommended default for most Nuxt apps,
+          "'nonce-1fz1fe1zdf1zd1fzfd'"
         ],
       }
     },
