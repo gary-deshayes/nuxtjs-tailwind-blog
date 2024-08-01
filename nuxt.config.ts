@@ -10,7 +10,10 @@ export default defineNuxtConfig({
         'script-src': [
           "'strict-dynamic'", // Modify with your custom CSP sources
           "'nonce-gdhs'" // Enables CSP nonce support for scripts in SSR mode, supported by almost any browser (level 2)
-        ]
+        ],
+        'style-src': [
+          "'self'", // Enables loading of stylesheets hosted on same origin
+        ],
       }
     },
   },

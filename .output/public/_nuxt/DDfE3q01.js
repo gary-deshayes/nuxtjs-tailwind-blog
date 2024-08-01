@@ -1,1 +1,0 @@
-import{_ as a,c as s,a as l,t as n,o}from"./D0mzW7IC.js";const r={async asyncData({params:e}){return{ville:e.ville}}};function c(e,t,i,p,u,_){return o(),s("div",null,[l("h1",null,"Développeur web fullstack sur "+n(e.ville),1)])}const d=a(r,[["render",c]]);export{d as default};
