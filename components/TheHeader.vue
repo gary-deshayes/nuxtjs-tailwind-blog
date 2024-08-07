@@ -107,7 +107,6 @@ const { data: categories }  = await useFetch('https://gary-deshayes.com/wp-json/
 const parentCategories = groupCategoriesByParent(categories.value)
 
 const { data: pages }  = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/pages');
-console.log(pages);
 onMounted(() => {
   initFlowbite();
 })

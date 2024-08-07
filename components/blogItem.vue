@@ -43,7 +43,6 @@ import TagIcon from "@/assets/icons/tag.svg?component";
 defineProps(["title", "image", "description", "date", "slug", "tags"]);
 
 const formatDate = (date) => {
-  console.log(date);
   const options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(date).toLocaleDateString("en", options);
 };

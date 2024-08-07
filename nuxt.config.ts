@@ -44,17 +44,17 @@ export default defineNuxtConfig({
   site: {
     url: 'gary-deshayes.com'
   },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', 'sitemap.xml'],
+    },
+  },
   sitemap: {
-    hostname: 'https://gary-deshayes.com',
-    routes: () => {
-      return towns.map(town => {
-        const formattedTown = town.toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/[éèêë]/g, 'e')
-          .replace(/[ç]/g, 'c');
-        return `/developpeur-web-fullstack/${formattedTown}`;
-      });
-    }
+    sources: [
+      '/api/towns',
+    ]
   },
   css: ["@/assets/css/main.css"],
   components: true,

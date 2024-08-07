@@ -23,7 +23,7 @@ const { data: posts } = await useFetch('https://gary-deshayes.com/wp-json/wp/v2/
     page: 10
   }
 });
-console.log(posts);
+
 
 const { data: articles } = await useAsyncData('home', () => queryContent("/articles")
   .only([
