@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     "nuxt-security"
   ],
   site: {
-    url: 'gary-deshayes.com'
+    url: 'portfolio.gary-deshayes.com'
   },
 
   nitro: {
