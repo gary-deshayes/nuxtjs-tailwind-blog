@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       routes: ['/', 'sitemap.xml'],
     },
   },
@@ -84,7 +84,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-        wordpressUrl: 'https://gary-deshayes.com/graphql'
+      wordpressUrl: 'https://gary-deshayes.com/graphql'
     }
   },
 })

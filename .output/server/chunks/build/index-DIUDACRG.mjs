@@ -50,5 +50,5 @@ function useSeoMeta(input, options) {
   });
 }
 
-export { useHead as a, useSeoMeta as u };
+export { useSeoMeta as a, useHead as u };
 //# sourceMappingURL=index-DIUDACRG.mjs.map

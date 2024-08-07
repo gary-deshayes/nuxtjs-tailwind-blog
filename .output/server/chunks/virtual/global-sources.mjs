@@ -1,5 +1,9 @@
 const sources = [
     {
+        "sourceType": "user",
+        "fetch": "/api/towns"
+    },
+    {
         "context": {
             "name": "sitemap:urls",
             "description": "Set with the `sitemap.urls` config."
@@ -28,13 +32,26 @@ const sources = [
         },
         "urls": [
             {
-                "loc": "/blog"
-            },
-            {
                 "loc": "/"
             },
             {
                 "loc": "/projects"
+            }
+        ],
+        "sourceType": "app"
+    },
+    {
+        "context": {
+            "name": "nuxt:prerender",
+            "description": "Generated at build time when prerendering.",
+            "tips": [
+                "Can be disabled with `{ excludeAppSources: ['nuxt:prerender'] }`."
+            ]
+        },
+        "urls": [
+            "/",
+            {
+                "loc": "/"
             }
         ],
         "sourceType": "app"

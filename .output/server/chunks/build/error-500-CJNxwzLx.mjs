@@ -1,4 +1,4 @@
-import { a as useHead } from './index-DIUDACRG.mjs';
+import { u as useHead } from './index-DIUDACRG.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
