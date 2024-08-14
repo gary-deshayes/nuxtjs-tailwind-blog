@@ -52,6 +52,7 @@ export default defineNuxtConfig({
     },
   },
   sitemap: {
+    hostname: 'portfolio.gary-deshayes.com',
     sources: [
       '/api/towns',
     ]
