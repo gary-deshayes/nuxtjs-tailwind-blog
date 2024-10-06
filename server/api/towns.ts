@@ -7,6 +7,6 @@ export default defineSitemapEventHandler(async () => {
           .replace(/\s+/g, '-')
           .replace(/[éèêë]/g, 'e')
           .replace(/[ç]/g, 'c');
-        return asSitemapUrl({ loc: `/developpeur-web-fullstack/${formattedTown}`});
+        return asSitemapUrl({ loc: `https://portfolio.gary-deshayes.com/developpeur-web-fullstack/${formattedTown}`});
       });
 })
